@@ -3,6 +3,21 @@
 
 using namespace std;
 
+//divide and conquer
+
+void mergesort(vector <int>& arr , int left, int right){
+
+    if(left>=right) return;
+
+    int mid = (left+right)/2;
+
+    mergesort(arr, left, mid);
+    mergesort(arr, mid+1, right);
+    mergealgo(arr,left, mid, right);
+
+}
+
+//helps convert char* to ints
 int charStarToInt(char *c){
     
 
