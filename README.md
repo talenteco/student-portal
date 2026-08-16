@@ -18,3 +18,8 @@ Go into the folder: cd student-portal
 #Usage
 Compile: g++ main.cpp -o main
 Run: ./main
+
+#Project Files
+main.cpp
+.gitignore
+
