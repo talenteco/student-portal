@@ -6,3 +6,11 @@ struct Settings {
     string theme = "light";
 };
 
+int main() {
+    Settings userSettings;
+    cout << "Notifications: " << userSettings.notifications << ", Theme: " << userSettings.theme << endl;
+    toggleNotifications(userSettings);
+    changeTheme(userSettings, "dark");
+    cout << "Updated -> Notifications: " << userSettings.notifications << ", Theme: " << userSettings.theme << endl;
+    return 0;
+}
