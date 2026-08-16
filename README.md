@@ -7,3 +7,8 @@ Adding features to student poral project
 
 Project is run by main.cpp
 
+#Language
+C++
+
+
+
