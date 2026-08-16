@@ -15,21 +15,27 @@ void updateBranch(Profile &p, string newBranch) {
     p.branch = newBranch;
 }
 
+bool checkIfEmpty(Profile P){
+    if(P.name=="") return true;
+    return false;
+}
 
-int main(int argc, char* argc) {
+
+int main(int argc, char* argv) {
     map<string, Profile> accountDetails={{"std_a",{"std_a", "1", "CSE"}},
                                         {"std_b",{"std_b", "2", "CSIS"}},
                                         {"std_c",{"std_c", "3", "VLSI"}}};
 
 
     Profile student;
-    student = accountDetails[argc[1]];
+    student = accountDetails[argv[1]];
+    if(checkIfEmpty(student)) cout<<"Invalid input"<<endl:
 
     displayProfile(student);
 
     updateBranch(student, "CSE-AI");
     cout << "\nAfter update:\n";
-    
+
     displayProfile(student);
     return 0;
 }
