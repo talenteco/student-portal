@@ -1,2 +1,9 @@
 #Student Portal
-Adding features to student portal project
+
+#About
+Studnet Portal is an aplication for managing logins, profile, dashboard and settings
+
+Adding features to student poral project
+
+Project is run by main.cpp
+
