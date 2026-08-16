@@ -25,6 +25,11 @@ bool isItEmpty(string s){
     return false;
 }
 
+bool checkIfNotExistingUser(string s){
+    if(stored_credentials.count(s)){return true;}
+    else return false;
+}
+
 int main(int argc, char* argv[]){
 
     
@@ -42,6 +47,10 @@ int main(int argc, char* argv[]){
     bool b = isItEmpty(student.password);
 
     if(a||b) cout<<"Empty Username or Password is invalid";
+
+    bool c = checkIfNotExistingUser(student.name);
+
+    if(!c) cout<<"Student Username doesnt exist, contact student administrator for account creation";
 
     else if(stored_credentials[student.name]!=student.password) cout<<"INCORRECT ID OR PASSWORD";
     else cout<<"Logged in Successfully";
