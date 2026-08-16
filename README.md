@@ -27,4 +27,6 @@ main.cpp
 Utkarsh Prashant
 
 #System Requirements
-AMD Ryzen 3 
+
+Intel i3 5th gen OR AMD Ryzen 3 OR Snapdragon Series 4
+
