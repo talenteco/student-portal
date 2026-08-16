@@ -15,7 +15,16 @@ void printSummary() {
     cout << "Average: " << calculateAverage() << endl;
 }
 
+bool checkIfEmpty(int a){
+    if(a<2) return true;
+    return false;
+}
+
 int main(int argc, char* argv[]) {
+    if(checkIfEmpty(argc)){
+        cerr<<"Incorrect number of arguments"<<endl;
+        exit(1);
+    }
     if(argv[1])printSummary();
     return 0;
 }
