@@ -6,6 +6,11 @@ struct Settings {
     string theme = "light";
 };
 
+void toggleNotifications(Settings &s) {
+    s.notifications = !s.notifications;
+}
+
+
 void changeTheme(Settings &s, string newTheme) {
     s.theme = newTheme;
 }
