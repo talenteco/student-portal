@@ -85,7 +85,7 @@ int main(int argc, char* argv[]){
 
     cout << "Here's the FINAL sorted array\n";
 
-    for(int x: arr) cout << x << " ";
+    for(int x: student_ID) cout << x << " ";
 
     cout << "\n";
 
