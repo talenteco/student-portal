@@ -6,6 +6,10 @@ struct Settings {
     string theme = "light";
 };
 
+void changeTheme(Settings &s, string newTheme) {
+    s.theme = newTheme;
+}
+
 int main() {
     Settings userSettings;
     cout << "Notifications: " << userSettings.notifications << ", Theme: " << userSettings.theme << endl;
