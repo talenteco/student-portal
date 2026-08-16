@@ -14,11 +14,21 @@ struct login{
     string password;
 } ;
 
-
+bool checkValid(int a){
+    if(a==3) return true;
+    return false;
+}
 
 int main(int argc, char* argv[]){
 
+    
+    bool val = checkValid(argc);
+
+    if(bool){}
+    else cout<<"Invalid input args";    
+    
     login student;
+    
     student.name = argv[1];
     student.password = argv[2];
 
