@@ -11,6 +11,11 @@ void displayProfile(Profile p) {
     cout << "Name: " << p.name << "\nRoll No: " << p.roll_no << "\nBranch: " << p.branch << endl;
 }
 
+void addStudentDetails(Profile P, map<string, Profile>& account_details){
+    account_details[P.name] = P;
+
+}
+
 void updateBranch(Profile &p, string newBranch) {
     p.branch = newBranch;
 }
@@ -30,6 +35,8 @@ int main(int argc, char* argv) {
     Profile student;
     student = accountDetails[argv[1]];
     if(checkIfEmpty(student)) cout<<"Invalid input"<<endl:
+
+    if(!accountDetails.count(student.name)) addStudentDetails(student, accountDetails);
 
     displayProfile(student);
 
