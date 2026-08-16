@@ -3,6 +3,11 @@ using namespace std;
 
 map<string, int> grades = {{"DSA", 85}, {"OS", 78}, {"DBMS", 90}};
 
+//TO DO
+void addSubject(string s){
+
+}
+
 double calculateAverage() {
     int sum = 0;
     for (auto &p : grades) sum += p.second;
