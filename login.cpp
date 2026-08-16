@@ -19,19 +19,31 @@ bool checkValid(int a){
     return false;
 }
 
+bool isItEmpty(string s){
+    if (s==""){return true;}
+
+    return false;
+}
+
 int main(int argc, char* argv[]){
 
     
     bool val = checkValid(argc);
 
-    if(bool){}
+    if(val){}
     else cout<<"Invalid input args";    
     
     login student;
     
     student.name = argv[1];
+    bool a = isItEmpty(student.name);
+    
     student.password = argv[2];
+    bool b = isItEmpty(student.password);
 
-    if(stored_credentials[student.name]!=student.password) cout<<"INCORRECT ID OR PASSWORD";
+    if(a||b) cout<<"Empty Username or Password is invalid";
+
+    else if(stored_credentials[student.name]!=student.password) cout<<"INCORRECT ID OR PASSWORD";
     else cout<<"Logged in Successfully";
+
 }
