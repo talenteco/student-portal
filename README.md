@@ -25,3 +25,6 @@ main.cpp
 
 #Contributor
 Utkarsh Prashant
+
+#System Requirements
+Intel i3 5th gen or equivalent
