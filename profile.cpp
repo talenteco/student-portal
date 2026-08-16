@@ -34,7 +34,7 @@ int main(int argc, char* argv) {
 
     Profile student;
     student = accountDetails[argv[1]];
-    if(checkIfEmpty(student)) cout<<"Invalid input"<<endl:
+    if(checkIfEmpty(student)) cout<<"Invalid input"<<endl;
 
     if(!accountDetails.count(student.name)) addStudentDetails(student, accountDetails);
 
