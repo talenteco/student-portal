@@ -12,6 +12,7 @@ map<string, string> stored_credentials={{"std_a","abc"},
 struct login{
     string name;
     string password;
+    string captcha;
 } ;
 
 bool checkValid(int a){
