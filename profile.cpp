@@ -11,6 +11,10 @@ void displayProfile(Profile p) {
     cout << "Name: " << p.name << "\nRoll No: " << p.roll_no << "\nBranch: " << p.branch << endl;
 }
 
+void updateBranch(Profile &p, string newBranch) {
+    p.branch = newBranch;
+}
+
 
 int main(int argc, char* argc) {
     map<string, Profile> accountDetails={{"std_a",{"std_a", "1", "CSE"}},
@@ -22,8 +26,10 @@ int main(int argc, char* argc) {
     student = accountDetails[argc[1]];
 
     displayProfile(student);
+
     updateBranch(student, "CSE-AI");
     cout << "\nAfter update:\n";
+    
     displayProfile(student);
     return 0;
 }
