@@ -3,6 +3,39 @@
 
 using namespace std;
 
+//merge algo
+void mergealgo(vector<int>& arr, int left, int mid, int right){
+
+    vector <int> temp;
+
+    int pointLeft, pointRight;
+    pointLeft= left;
+    pointRight = mid+1;
+
+    while((pointLeft<= mid)&&(pointRight<=right)){
+
+        if(arr[pointLeft]<arr[pointRight]) temp.push_back(arr[pointLeft++]);
+        else temp.push_back(arr[pointRight++]);
+    }
+
+    while(pointLeft<=mid) temp.push_back(arr[pointLeft++]);
+    while(pointRight<=right) temp.push_back(arr[pointRight++]);
+
+    //sorted subarray in temp, now copying back to original array
+
+    for(int i=0; i<temp.size(); i++){
+        arr[left+i] = temp[i];
+    }
+
+    cout << "Here's the SUB sorted array\n";
+
+    for(int x: arr) cout << x << " ";
+
+    cout << "\n";
+
+}
+
+
 //divide and conquer
 
 void mergesort(vector <int>& arr , int left, int right){
